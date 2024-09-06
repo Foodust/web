@@ -71,10 +71,16 @@ p {
   border: 1px solid black;
   border-radius: 10px;
   display: inline-block;
-  vertical-align: top;
+  position: relative;
 }
 .sub-box {
   margin-left: 10px;
+}
+.box-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .language {
   display: flex;
