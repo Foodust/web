@@ -5,8 +5,7 @@
 }
 @font-face {
   font-family: "Paperlogy-8ExtraBold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2")
-    format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2") format("woff2");
   font-style: normal;
   font-weight: 900;
 }
@@ -73,15 +72,7 @@ p {
   display: inline-block;
   position: relative;
 }
-.sub-box {
-  margin-left: 10px;
-}
-.box-text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+
 .language {
   display: flex;
   align-items: center;
@@ -105,7 +96,42 @@ img {
   aspect-ratio: 1;
   object-fit: contain;
 }
-
+.expandable-button {
+  background-color: #ddf0de;
+  padding: 20px;
+  height: 100px;
+  width: 120px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+.expandable-button.expanded {
+  width: 350px;
+  height: 500px;
+  padding: 10px;
+  background-color: #ddf0de;
+}
+.expanded .button-content {
+  opacity: 1;
+}
+.button-text {
+  transition: opacity 0.3s ease-out;
+}
+.expanded .button-text {
+  opacity: 0;
+}
+.button-content {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.expanded .button-content {
+  max-height: 200px;
+}
+.inline-layout span .inline-layout a {
+  display: inline;
+}
 #app > a {
   display: block;
   margin-top: 20px;
